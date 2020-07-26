@@ -1,0 +1,18 @@
+body {
+    font-family: "Calibri", sans-serif;
+}
+
+header {
+    background: blue;
+    color: white; 
+    height: 70px;
+    font-size: 30px;
+    font-style: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 { 
+    font-size: 24px;
+}
