@@ -1,18 +1,516 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?tq1sq5');
+  src:  url('../fonts/icomoon.eot?tq1sq5#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?tq1sq5') format('truetype'),
+    url('../fonts/icomoon.woff?tq1sq5') format('woff'),
+    url('../fonts/icomoon.svg?tq1sq5#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-menu:before {
+  content: "\e900";
+}
+ 
 body {
-    font-family: "Calibri", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-header {
-    background: blue;
-    color: white; 
-    height: 70px;
-    font-size: 30px;
-    font-style: bold;
-    display: flex;
+.header {
+  background-color: #1D252C;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  height: auto;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.header img {
+  height: 80px;
+  margin-left: 20px;
+}
+
+.header a {
+  color:white;
+  text-decoration: none;
+  height: inherit;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.header ul{
+  display:flex;
+  height: inherit;
+}
+
+.header ul li{
+  height: inherit;
+}
+
+.menu {
+  height: inherit;
+}
+
+figure {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Fjalla One", sans-serif;
+  font-weight: normal;
+}
+
+h1{
+  padding: 15px;
+  font-size: 40px;
+  line-height: 1.5;
+  letter-spacing: -0.2px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+h1 strong {
+  color: #026fff;
+}
+
+h2 {
+  color: #026fff;
+  text-transform: uppercase;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+  margin-bottom: 40px;
+}
+
+.hero {
+  background-color: #1D252C;
+  height: auto;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.hero-image{
+  margin: 0;
+  width: 55%;
+  justify-self: flex-end;
+}
+
+.portfolio{
+  background-color: #FAFAFA;
+  padding: 20px;
+}
+
+.project {
+  border: 1px solid gray;
+  border-radius: 20px;
+  margin-bottom: 15px;
+  padding: 20px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.project-title{
+  font-size: 30px;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.project-course, 
+.project-date, 
+.project-url {
+  margin: 10px 0;
+}
+
+.project strong{
+  font-family: "Fjalla One", sans-serif;
+}
+
+.project-details {
+  width: 50%;
+}
+
+.project-description {
+  font-size: 20px;
+}
+
+.project-imageContainer { 
+  width: 50%;
+}
+
+.project-imageContainer img{
+  max-width: 100%;
+  width: 100%;
+}
+
+.eventlist{
+  display: flex;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+}
+
+.eventlist-title{
+  margin-left: 20px;
+}
+
+.event {
+  border: 1px solid grey;
+  border-radius: 10px;
+  margin: 1%;
+  width: 46%;
+  flex-shrink: 0;
+  overflow: hidden;
+  background-color: #F4FBFF;
+}
+
+.event img{
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.event-detail {
+  margin: 20px 40px;
+  background-color: white;
+  margin-top: -40px;
+  position: relative;
+  padding: 20px;
+  text-align: center;
+}
+
+.event-description{
+  text-align: left;
+}
+
+.event-url { 
+  color: #026fff;
+  border: 1px solid;
+  padding: 5px 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 5px;
+}
+
+.contact{
+  background-color: #026fff;
+  color: white;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.form-email input{
+  border-color: grey;
+  border-radius: 5px;
+  border-style: solid;
+  padding: 5px 20px 5px 30px;
+  background-image: url("../images/envelope.svg");
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  background-position-x: 5px;
+  background-position-y: center;
+}
+
+.form-email button{
+  display: block;
+  margin-top: 10px;
+  background: transparent;
+  color: white;
+  padding: 10px 0;
+  border-radius: 5px;
+  width: 100px;
+}
+
+.form-email h3 {
+  font-family: "Source Sans Pro", sans-serif;
+  font-style: bold;  
+  font-size: 20px;
+}
+
+.social-link{
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  margin: 0 10px;
+  background-size: 50px 50px;
+}
+
+.social-link.twitter{
+  background-image: url("../images/twitter.svg");
+}
+
+.social-link.facebook{
+  background-image: url("../images/facebook.svg");
+}
+
+.social-link.github{
+  background-image: url("../images/github.svg");
+}
+
+.social-link.instagram{
+  background-image: url("../images/instagram.svg");
+}
+
+.footer{
+  background-color: #1D252C;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer p{
+  margin: 0 20px;
+}
+
+.footer img{
+  vertical-align: middle;
+}
+
+.wrapper{
+  max-width: 1000px;
+  margin: 0 auto;
+  display: inherit;
+  justify-items: inherit;
+  align-items: inherit;
+  height: inherit;
+  flex-wrap: inherit;
+}
+
+.burger-button {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: none;
+  background-color: #1D252C;
+  line-height: 60px;
+  text-align: center;
+  position: fixed;
+  z-index: 4;
+  color: white;
+  font-size: 1.3em;
+}
+
+@media screen and (max-width: 1024px) {
+  .wrapper{
+    margin: 0 1em;
+  }
+  .hero {
+    height: auto;
+    position: relative;
+  }
+
+  h1{
+    font-size: 2em;
+    z-index: 2;
+  }
+
+  .hero-image{
+    margin-left: 0;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    object-fit: cover;
+    overflow: hidden;
+    height: 13em;
+  }
+
+  .portfolio {
+    padding: 0;
+  }
+
+}
+
+@media screen and (max-width: 767px) {
+
+.burger-button{
+  display: block;
+}
+
+  .header{
+    display: block;
+    height: auto;
+  }
+  .header ul{
+    flex-direction: column;
+    height: auto;
+  }
+
+  .header ul li{
+    height: 50px;
+  }
+
+  .header a{
     justify-content: center;
+    height: 40;
+    font-size: 1.2em;
+  }
+
+  .header .logo {
+    text-align: center;
+  }
+
+  h2 {
+    margin-bottom: 0.4em;
+  }
+
+  .menu {
+    position: fixed;
+    background: rgba(29, 37, 44,0.9);
+    z-index: 3;
+    left: -100vw;
+    top: 0;
+    width: 50vw;
+    height: 50vh;
+    display: flex;
     align-items: center;
+    justify-content: center;
+    transition: .3s;
+  }
+
+  .menu .is-active {
+    left: 0;
+  }
+
+  .project {
+    display: block;
+  }
+
+  .project-imageContainer{
+    width: auto;
+  }
+
+  .project-course .project-date .project-url {
+  margin: 0.3em 0;
 }
 
-h1 { 
-    font-size: 24px;
+  .project-details{
+    width: auto;
+    font-size: 16px;
+  }
+
+  .project-title {
+    font-size: 1.5em;
+    margin-bottom: 0.3em;
+  }
+
+  .project-url{
+    font-size: 1em;
+  }
+
+  .project-date {
+    font-size: 1em;
+  }
+
+  .project-course {
+    font-size: 0.7em;
+  }
+
+  .project-description {
+    font-size: 1.2em;
+  }
+
+  .event {
+    width: auto;
+    flex-shrink: initial;
+  }
+
+  .event img{
+    width: 100%;
+  }
+
+}
+
+@media screen and (max-width: 560px) {
+    .contact { 
+    padding: 1em 0;
+    height: auto;
+    display: block;
+    text-align: center;
+  }
+
+  .form-email h3{
+    margin-top: 0;
+  }
+
+  .form-email button{
+    margin: 1em auto;
+    font-size: 1em;
+  }
+
+  .social{
+    padding-top: 0.5em;
+  }
+
+  .footer{
+    display: block;
+    text-align: center;
+  }
+ }
+
+@media screen and (max-width: 480px) {
+
+  h1{
+    font-size: 1.2em;
+  }
+
+  .hero-image{
+    height: 8em;
+  }
+
+  .project-details{
+    width: auto;
+    font-size: 12px;
+  }
+
+  .event-detail {
+    margin: -2em 0.8em 0.8em;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .social-link{
+    height: 40px;
+    width: 40px;
+    background-size: 100%;
+  }
 }

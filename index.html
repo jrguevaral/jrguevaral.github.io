@@ -1,14 +1,199 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Javier Guevara</title>
+    <link rel="icon" type="image/png" href="./images/large.png"/>
     <link rel="stylesheet" href="./css/styles.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi primer blog</title>
-</head>
-<body>
-    <header>El blog de Javier Guevara</header>
-    <h1>Ingeniero químico con interés por la simulación</h1>
-    <p>Estamos probando esto para el curso de Git y GitHub de Platzi</p>
-</body>
+    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Source+Sans+Pro" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <script>
+      const menu = document.querySelector(".menu");
+      const button = document.querySelector('#burger-menu');
+
+      function hideShow(){
+        if (menu.classList.contains("is-active")) {
+        menu.classList.remove("is-active");
+        } else {
+        menu.classList.add("is-active");
+        } 
+
+     /* button.addEventListener('click', ()=>{
+      document.querySelector('.menu').classList.toggle('is-active')
+      })
+       const menu = document.getElementsByClassName('menu');
+      const burgerButton = document.getElementsByClassName('burger-button');
+      burgerButton[1].addEventListener('click', hideShow); 
+
+      function hideShow(){
+        if (menu[0].classList.contains("is-active")) {
+        menu[0].classList.remove("is-active");
+        } else {
+        menu[0].classList.add("is-active");
+        } 
+      } */
+
+      const ipad = window.matchMedia("screen and (max-width: 767px)");
+      
+      ipad.addListener(validation)
+
+      function validation(event) {
+        if(event.matches) {
+          burgerButton.addEventListener("click", hideShow)
+        } else {
+          burgerButton.removeEventListener("click", hideShow)
+        }
+      }
+
+    validation(ipad);
+
+    </script>
+    <i class="icon-menu burger-button" id="burger-menu"></i>
+    <header class="header">
+      <div class="wrapper">
+        <figure class="logo">
+          <img src="./images/logo_jg_negro.png" height= 50px; alt="Logo" />
+        </figure>
+        <nav class="menu" id="menu">
+          <ul>
+            <li>
+              <a class="link" href="#portfolio">Portafolio</a>
+            </li>
+            <li>
+              <a class="link" href="#eventos">Experiencia</a>
+            </li>
+            <li>
+              <a  class="link" href="#contact">Trabajemos juntos</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <section class="hero">
+      <div class="wrapper">
+        <h1>
+          Hola! Soy <strong>Javier Guevara</strong> <br> Ingeniero 
+          químico con <br> pasión por la <strong>enseñanza</strong>.
+        </h1>
+        <img src="./images/foto.jpg" class="hero-image" alt="Imagen principal">
+      </div>
+    </section>
+    <section class="portfolio" id="portfolio">
+      <div class="wrapper">
+        <h2 class="portfolio-title">Portafolio (Proyectos destacados)</h2>
+        <article class="project">
+          <div class="project-details">
+            <h3 class="project-title">Implementación Página Web</h3>
+            <h6 class="project-course">Exergétika</h6>
+            <p class="project-date"><small><strong>Fecha:</strong> 01/07/2018</small></p>
+            <p class="project-url"><small><strong>Puedes verlo en:</strong> www.platzi.com/native</small></p>
+            <p class="project-description"> En este proyecto estoy aplicando lo aprendido en los cursos
+            de Platzi de desarrollo web, y resposive design.</p>
+           </div> 
+          <figure class="project-imageContainer">
+            <img class="project-image" src="./images/platzi-video-react-native.png" width="500px" alt="platzi video">
+          </figure>
+        </article>
+        <article class="project">
+          <div class="project-details">
+            <h3 class="project-title">Simulador en tiempo real</h3>
+            <h6 class="project-course">Cálidda - Perú</h6>
+            <p class="project-date"><small><strong>Fecha:</strong> 03/31/2019</small></p>
+            <p class="project-url"><small><strong>Puedes verlo en:</strong> www.platzi.com/native</small></p>
+            <p class="project-description">Platzi Video fue el resultado de 3 meses de trabajo
+              para crear la mejor app para enseñar el funcionamiento
+            de React y React Native. Desde crear un vista-detalle, hasta patrones. </p>
+           </div> 
+          <figure class="project-imageContainer">
+            <img class="project-image" src="./images/modelamiento.png" width="500px" alt="platzi video">
+          </figure>
+        </article>
+      </div>
+    </section>
+   <!--  <video class="html-video" src="./videos/f8.mp4" width="1280px" height="720px" controls></video> -->
+  <div class="wrapper">
+      <h2 class="eventlist-title">Más sobre mi experiencia</h2>
+  </div>
+   <section id="eventos" class="eventlist">
+      <div class="wrapper">
+        <article class="event">
+            <figure class="event-imageContainer">
+              <img class="event-image" src="./images/colombia2019.jpg" width="500px" alt="platzi conf"/>
+            </figure>
+            <div class="event-detail">
+            <h3 class="event-title">Curso de Synergi Pipeline Simulator Colombia 2019</h3>
+            <p class="event-description">El evento más grande sobre gente que quiere aprender más de internet. En este evento te comparto cómo tener una vida de constante aprendizaje.</p>
+            <a class="event-url"> ver más</a>
+          </div>
+        </article>
+        <article class="event">
+          <figure class="event-imageContainer">
+            <img class="event-image" src="./images/chile2018.jpg" width="500px" alt="platzi conf"/>
+          </figure>
+          <div class="event-detail">
+          <h3 class="event-title">Curso de Syenrgi Pipeline Simulator 2018</h3>
+          <p class="event-description">Curso del simulador hidráulico impartido en Santiago, Chile en julio de 2018.</p>
+          <a class="event-url"> ver más</a>
+        </div>
+        </article>
+        <article class="event">
+          <figure class="event-imageContainer">
+            <img class="event-image" src="./images/colombia2018.jpeg" width="500px" alt="platzi conf"/>
+          </figure>
+          <div class="event-detail">
+          <h3 class="event-title">Curso de Synergi Gas Medellín 2018</h3>
+          <p class="event-description">Curso del simulador hidraúlico de redes de distribución impartido en Medellín, Colombia en febrero de 2018.</p>
+          <a class="event-url"> ver más</a>
+          </div>
+        </article>
+        <article class="event">
+          <figure class="event-imageContainer">
+            <img class="event-image" src="./images/mexico2018.jpeg" width="500px" alt="platzi conf"/>
+          </figure>
+          <div class="event-detail">
+          <h3 class="event-title">Curso Synergi Pipeline Simulator México 2018</h3>
+          <p class="event-description">Curso del simulador hidráulico impartido en San Luis Potosi, México en febrero de 2018.</p>
+          <a class="event-url"> ver más</a>
+          </div>
+        </article>
+        <article class="event">
+          <figure class="event-imageContainer">
+            <img class="event-image" src="./images/argentina2017.jpg" width="500px" alt="platzi conf"/>
+          </figure>
+          <div class="event-detail">
+          <h3 class="event-title">Curso Synergi Gas Argentina 2017</h3>
+          <p class="event-description">>Curso del simulador hidraúlico de redes de distribución impartido en Buenos Aires, Argentina en febrero de 2018.</p>
+          <a class="event-url"> ver más</a>
+          </div>
+        </article>
+      </div>
+    </section>
+    <section class="contact" id="contact">
+      <div class="wrapper">
+        <form class="form-email" action="/suscripcion/">
+          <h3>Déjanos tu email</h3>
+          <input type="text" name="contact" value="nombre@pagina.com" id=email>
+          <button>Enviar</button>
+        </form>
+        <div class="social">
+          <a class="social-link twitter" href="https://www.twitter.com/jrguevaral"></a>
+          <a class="social-link facebook" href="https://www.facebook.com/jrguevaral"></a>
+          <a class="social-link github" href="hhtps://www.github.com/"></a>
+          <a class="social-link instagram" href="https://www.instragram.com/jrguevaral"></a>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="wrapper">
+        <div>
+          <p>Curso de Desarrollo web Online 2020 <img src="./images/platzi.png" width=80px; alt="platzi"></p>
+        </div>
+        <div>
+          <p>Diseñado por Javier Guevara</p>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
